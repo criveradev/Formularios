@@ -1,0 +1,20 @@
+{# Leer un tipo de mensaje #}
+{% for message in app.flashes('succes')%}
+	<div class="alert alert-success" role="alert">
+		{{message}}
+	</div>
+{% endfor %}
+
+{# Leer un tipo de mensaje #}
+{% for message in app.flashes('info')%}
+	<div class="alert alert-info" role="alert">
+		{{message}}
+	</div>
+{% endfor %}
+
+{# Todos los mensajes #}
+{% for type, messages in app.flashes %}
+	{% for message in messages %}
+		<div class="alert alert-{{ type }}" role="alert">{{ message }}</div>
+	{% endfor %}
+{% endfor %}

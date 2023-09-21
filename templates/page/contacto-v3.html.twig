@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PageController!
+{% endblock %}
+
+{% block body %}
+	<h1>Formulario V3! ✅</h1>
+
+	{% form_theme contactoForm 'bootstrap_5_horizontal_layout.html.twig' %}
+	{{ form_start(contactoForm, {
+        'method': 'POST',
+        'attr': {'novalidate': 'novalidate'}
+    }) }}
+
+	{{ form_widget(contactoForm) }}
+
+
+	{{ form_end(contactoForm) }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulario
+{% endblock %}
+
+{% block body %}
+	<h1>Formulario V1 ✅</h1>
+
+	{{form(contactoForm)}}
+		{# Podemos hacer muchas cosas con la vista, una de ellas es cambiar el metodo de respuesta {{form(contactForm, {'method':GET'})}} #}
+	{% endblock %}
